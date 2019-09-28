@@ -25,30 +25,50 @@
         <StatusBar DockPanel.Dock="Bottom">
             <TextBlock>Готов к труду и обороне!</TextBlock>
         </StatusBar>
-        <TabControl>
-            <TabItem Header="Панели">
-                <TabControl TabStripPlacement="Bottom">
-                    <TabItem Header="Grid">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*"/>
-                                <ColumnDefinition Width="5*"/>
-                                <ColumnDefinition Width="7*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="22*"/>
-                                <RowDefinition Height="55*"/>
-                                <RowDefinition Height="172*"/>
-                            </Grid.RowDefinitions>
-                            
-                        </Grid>
-                    </TabItem>
-                    <TabItem Header="StackPanel"></TabItem>
-                    <TabItem Header="DockPanel"></TabItem>
-                    <TabItem Header="WrapPanel"></TabItem>
-                </TabControl>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
+            
+            <TabItem Header="Рассылка">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <ToolBarTray Grid.Row="0">
+                        <ToolBar>
+                            <Label MinWidth="85">Отправители</Label>
+                            <ComboBox MinWidth="75" MaxWidth="150">
+                                <ComboBoxItem>Отправитель 1</ComboBoxItem>
+                                <ComboBoxItem>Отправитель 2</ComboBoxItem>
+                                <ComboBoxItem>Отправитель 3</ComboBoxItem>
+                            </ComboBox>
+                            <Button Content="Создать"/>
+                            <Button Content="Редактировать"/>
+                            <Button Content="Удалить"/>
+                        </ToolBar>
+                        <ToolBar Band="1">
+                        <Label MinWidth="85">Сервера</Label>
+                        <ComboBox MinWidth="75" MaxWidth="150">
+                            <ComboBoxItem>Отправитель 1</ComboBoxItem>
+                            <ComboBoxItem>Отправитель 2</ComboBoxItem>
+                            <ComboBoxItem>Отправитель 3</ComboBoxItem>
+                        </ComboBox>
+                        <Button Content="Создать"/>
+                        <Button Content="Редактировать"/>
+                        <Button Content="Удалить"/>
+                        </ToolBar>
+                        <ToolBar>
+                            <Label MinWidth="85">Перейти в планировщик</Label>
+                            <Button>Перейти</Button>
+                        </ToolBar>
+                        <ToolBar Band="1">
+                            <Label MinWidth="85">Получатели</Label>
+                            <Button Content="Создать"/>
+                            <Button Content="Редактировать"/>
+                            <Button Content="Удалить"/>
+                        </ToolBar>
+                    </ToolBarTray>
+                </Grid>
             </TabItem>
-            <TabItem Header="Списки"></TabItem>
             <TabItem Header="Планировщик"></TabItem>
             <TabItem Header="Письма"></TabItem>
              
