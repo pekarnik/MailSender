@@ -27,7 +27,7 @@ namespace MailSender
 
 		private void ExitMenuItem_OnClicktem_Click(object sender, RoutedEventArgs e)
 		{
-
+			Close();
 		}
 
 		
